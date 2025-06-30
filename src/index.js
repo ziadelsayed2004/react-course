@@ -2,10 +2,36 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import About from "./pages/About";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: "<h1>Error 404 \"Not Found\"</h1>",
+  },
+
+  {
+    path: "/Home",
+    element: <App />,
+    errorElement: "<h1>Error 404 \"Not Found\"</h1>",
+  },
+
+  {
+    path: "/About",
+    element: <About />,
+    errorElement: "<h1>Error 404 \"Not Found\"</h1>",
+  },
+
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );

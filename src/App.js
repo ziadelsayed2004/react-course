@@ -1,9 +1,11 @@
 function App() {
-  return (
-    <>
-
-    </>
-  );
+    return (
+        <>
+            <h1>
+                Home Page
+            </h1>
+        </>
+    );
 }
 
 export default App;
