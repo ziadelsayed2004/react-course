@@ -31,8 +31,6 @@ const router = createBrowserRouter([
 
 ]);
 
-serviceWorkerRegistration.register();
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -41,3 +39,5 @@ root.render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
