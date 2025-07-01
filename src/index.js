@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,8 @@ const router = createBrowserRouter([
   },
 
 ]);
+
+serviceWorkerRegistration.unregister();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
